@@ -33,6 +33,16 @@
     <li> <a href="#make" class="smoothScroll"> ツクル</a></li>
     <li> <a href="#New_Loki" class="smoothScroll"> New Loki</a></li>
     <li> <a href="#contact" class="smoothScroll"> Contact</a></li>
+<!-- ログイン、新規登録. -->
+    <% if user_signed_in? %>
+    <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "login", new_user_session_path, class: 'post' %></li>
+      <li><%= link_to "signup", new_user_registration_path, class: 'post' %></li>
+      <% end %>
+
+      <!-- ログイン、新規登録. -->
+
       </div><!--/.nav-collapse -->
     </div>
   </div>

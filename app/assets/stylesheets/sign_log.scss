@@ -1,0 +1,154 @@
+.row1 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+  *zoom: 1;
+}
+.row1 .grid-1,
+.row1 .grid-2,
+.row1 .grid-3,
+.row1 .grid-4,
+.row1 .grid-5,
+.row1 .grid-6,
+.row1 .grid-7,
+.row1 .grid-8,
+.row1 .grid-9,
+.row1 .grid-10,
+.row1 .grid-11,
+.row1 .grid-12 {
+  float: left;
+  margin-left: 0.9%;
+  margin-right: 0.9%;
+}
+.row1 .grid-1 {
+  width: 6.53333%;
+}
+.row1 .grid-2 {
+  width: 14.86667%;
+}
+.row1 .grid-3 {
+  width: 23.2%;
+}
+.row1 .grid-4 {
+  width: 31.53333%;
+}
+.row1 .grid-5 {
+  width: 39.86667%;
+}
+.row1 .grid-6 {
+  width: 48.2%;
+}
+.row1 .grid-7 {
+  width: 56.53333%;
+}
+.row1 .grid-8 {
+  width: 64.86667%;
+}
+.row1 .grid-9 {
+  width: 73.2%;
+}
+.row1 .grid-10 {
+  width: 81.53333%;
+}
+.row1 .grid-11 {
+  width: 89.86667%;
+}
+.row1 .grid-12 {
+  width: 98.2%;
+}
+
+.row1:before, .row1:after {
+  content: " ";
+  display: table;
+}
+
+.row1:after {
+  clear: both;
+}
+
+.row1.collapse > .column,
+.row1.collapse > .columns {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+}
+
+.row1.collapse .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row1 .row1 {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+
+.row1 .row1:before, .row1 .row1:after {
+  content: " ";
+  display: table;
+}
+
+.row1 .row1:after {
+  clear: both;
+}
+
+.row1 .row1.collapse {
+  width: auto;
+  margin: 0;
+  max-width: none;
+  *zoom: 1;
+}
+
+.row1 .row1.collapse:before, .row1 .row1.collapse:after {
+  content: " ";
+  display: table;
+}
+
+.row1 .row1.collapse:after {
+  clear: both;
+}
+
+@media only screen and (max-width: 40em) {
+  .row1 {
+    width: 100%;
+    padding: 0 20px !important;
+  }
+  .row1 .grid-1,
+  .row1 .grid-2,
+  .row1 .grid-3,
+  .row1 .grid-4,
+  .row1 .grid-5,
+  .row1 .grid-6,
+  .row1 .grid-7,
+  .row1 .grid-8,
+  .row1 .grid-9,
+  .row1 .grid-10,
+  .row1 .grid-11,
+  .row1 .grid-12 {
+    float: none;
+    width: 100% !important;
+    margin: 0 !important;
+    position: static !important;
+  }
+}
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .row1 .grid-1,
+  .row1 .grid-2,
+  .row1 .grid-3,
+  .row1 .grid-4 {
+    width: 48.2% !important;
+  }
+}
+
+
+
