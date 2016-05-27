@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Loki</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
+
+  <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+
+<div id="navbar-main">
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+        </button>
+        <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-puzzle" style="font-size:18px; color:#3498db;"></span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#home" class="smoothScroll">Home</a></li>
+    <li> <a href="#about" class="smoothScroll"> About</a></li>
+    <li> <a href="#concept" class="smoothScroll"> Concept</a></li>
+    <li> <a href="#ranking" class="smoothScroll"> Ranking</a></li>
+    <li> <a href="#make" class="smoothScroll"> ツクル</a></li>
+    <li> <a href="#New_Loki" class="smoothScroll"> New Loki</a></li>
+    <li> <a href="#blog" class="smoothScroll"> Blog</a></li>
+    <li> <a href="#contact" class="smoothScroll"> Contact</a></li>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+
+<%= yield %>
+
+  <script>
+  $('.slider').slick({
+    autoplay: true,
+  // 自動再生で切り替えをする時間
+  autoplaySpeed: 1000,
+  // 自動再生や左右の矢印でスライドするスピード
+  speed: 500,
+  pauseOnHover: false,
+  // 自動再生時にドットにマウスオンで一時停止するかどうか
+  fade: true,
+  });
+  </script>
+</body>
+</html>
