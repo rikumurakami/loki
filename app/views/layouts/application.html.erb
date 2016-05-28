@@ -21,7 +21,7 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+          <span class="icon icon-puzzle" style="font-size:18px; color:#3498db;"></span>
         </button>
         <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-puzzle" style="font-size:18px; color:#3498db;"></span></a>
       </div>
@@ -36,10 +36,13 @@
 <!-- ログイン、新規登録. -->
     <% if user_signed_in? %>
     <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+    <li><a class="post" href="/top/new">post</a></li>
       <% else %>
-      <li><%= link_to "login", new_user_session_path, class: 'post' %></li>
-      <li><%= link_to "signup", new_user_registration_path, class: 'post' %></li>
-      <% end %>
+
+      <li><%= link_to new_user_session_path, method: :post do %>
+      <span class="icon icon-lock-3" style="font-size:18px; color:#3498db;"></span>
+    <% end %></li>
+    <% end %>
 
       <!-- ログイン、新規登録. -->
 

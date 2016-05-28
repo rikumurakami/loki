@@ -49,3 +49,5 @@ gem 'devise'
 
 gem 'carrierwave'
 
+gem 'kaminari'
+
