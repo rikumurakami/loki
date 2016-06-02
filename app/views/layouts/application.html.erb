@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Loki</title>
+  <title>LOKI</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
@@ -10,51 +10,53 @@
   <%= csrf_meta_tags %>
 
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 
 
-<div id="navbar-main">
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon icon-puzzle" style="font-size:18px; color:#3498db;"></span>
-        </button>
-        <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-puzzle" style="font-size:18px; color:#3498db;"></span></a>
+  <div id="navbar-main">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon icon-puzzle" style="font-size:18px; color:#3498db;"></span>
+          </button>
+          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-puzzle" style="font-size:18px; color:#3498db;"></span></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <!-- <li> <a href="#home" class="smoothScroll"> About</a></li> -->
+            <li> <%= link_to "Home", "/#home", class: "smoothScroll" %></li>
+            <li> <%= link_to "About", "/#about", class: "smoothScroll" %></li>
+            <li> <%= link_to "New Loki", "/#new_Loki",class: "smoothScroll", id: "New_Loki" %></li>
+            <li> <%= link_to "Contact", "/#contact",class: "smoothScroll"%></li>
+            <li> <%= link_to "Newsletter", "/#contact",class: "smoothScroll"%></li>
+            <!-- ログイン、新規登録. -->
+            <% if user_signed_in? %>
+            <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+            <li><a class="post" href="/top/new">post</a></li>
+
+            <% else %>
+            <!-- サインインしてなかったら -->
+            <li><%= link_to new_user_session_path, method: :post do %>
+              <span class="icon icon-lock-3" style="font-size:18px; color:#grey;"></span>
+              <% end %></li>
+            <% end %>
+             <!-- <li> <%= link_to "pass update", new_user_registration_path, method: :get %> </li> -->
+          </ul>
+            <!-- ログイン、新規登録. -->
+
+          </div><!--/.nav-collapse -->
+        </div>
       </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#home" class="smoothScroll">Home</a></li>
-    <li> <a href="#about" class="smoothScroll"> About</a></li>
-    <li> <a href="#New_Loki" class="smoothScroll"> New Loki</a></li>
-    <li> <a href="#contact" class="smoothScroll"> Contact</a></li>
-    <li> <a href="#contact" class="smoothScroll"> Newsletter</a></li>
-
-<!-- ログイン、新規登録. -->
-    <% if user_signed_in? %>
-    <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
-    <li><a class="post" href="/top/new">post</a></li>
-      <% else %>
-
-      <li><%= link_to new_user_session_path, method: :post do %>
-      <span class="icon icon-lock-3" style="font-size:18px; color:#3498db;"></span>
-    <% end %></li>
-    <% end %>
-
-      <!-- ログイン、新規登録. -->
-
-      </div><!--/.nav-collapse -->
     </div>
-  </div>
-</div>
 
 
 <%= yield %>
 
-  <script>
+<script>
   $('.slider').slick({
     autoplay: true,
   // 自動再生で切り替えをする時間
@@ -64,7 +66,7 @@
   pauseOnHover: false,
   // 自動再生時にドットにマウスオンで一時停止するかどうか
   fade: true,
-  });
-  </script>
+});
+</script>
 </body>
 </html>

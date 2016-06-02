@@ -2,11 +2,11 @@
 
         <!-- PORTFOLIO IMAGE 1 -->
         <div class="col-md-4 ">
-        <% if user_signed_in? %>
+          <% if user_signed_in? %>
           <%= link_to 'delete', "/top/#{tweet.id}", method: :delete %>
           <%= link_to 'edit', "/top/#{tweet.id}/edit", method: :get %>
           <% end %>
-            <div class="grid mask">
+          <div class="grid mask">
             <figure>
               <img class="img-responsive" src="<%= tweet.image%>" alt="">
               <figcaption>
@@ -14,31 +14,34 @@
                 <a data-toggle="modal" href="#<%= tweet.id %>" class="btn btn-primary btn-lg">Take a Look</a>
               </figcaption><!-- /figcaption -->
             </figure><!-- /figure -->
-            </div><!-- /grid-mask -->
+          </div><!-- /grid-mask -->
         </div><!-- /col -->
 
 
              <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
                   a modal for each of your projects. -->
 
-              <div class="modal fade" id="<%= tweet.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title"><%= tweet.title %></h4>
-                    </div>
-                    <div class="modal-body">
-                      <p><img class="img-responsive" src="<%= tweet.image %>" alt=""></p>
-                      <p><%= simple_format(tweet.text) %></p>
-                      <p><b><a href="#">Visit Site</a></b></p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
+                  <div class="modal fade" id="<%= tweet.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title"><%= tweet.title %></h4>
+                        </div>
+                        <div class="modal-body">
+                          <p><img class="img-responsive" src="<%= tweet.image %>" alt=""></p>
+                          <p><%= simple_format(tweet.text) %></p>
+                          <p><b><a href="#">Visit Site</a></b></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
 
             <% end %>
-        <%= paginate @tweets, :remote => true %>
+
+            <div class="col-md-12">
+                <%= paginate @tweets, :remote => true %>
+            </div>

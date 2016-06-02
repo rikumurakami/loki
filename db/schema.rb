@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527170340) do
+ActiveRecord::Schema.define(version: 20160528070053) do
+
+  create_table "letters", force: :cascade do |t|
+    t.text     "mail",       limit: 65535
+    t.text     "name",       limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tweets", force: :cascade do |t|
     t.text     "title",      limit: 65535

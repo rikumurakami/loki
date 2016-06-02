@@ -731,6 +731,18 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+
+.post{padding: 100px;
+      margin:0 auto;
+}
+
+.field{padding-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 450px;
+
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -767,6 +779,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  margin:0 auto;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -1985,6 +1998,29 @@ select[multiple].input-lg {
   top: 0;
   right: 15px;
 }
+
+
+
+
+.btn1 {
+    font-size: 14px;
+    border: 2px solid $accent;
+    color: $accent;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
+
+
 .btn {
   display: inline-block;
   padding: 6px 12px;

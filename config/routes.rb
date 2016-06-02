@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   delete  'top/:id'  => 'top#destroy'
   get   'top/:id/edit'  => 'top#edit'
   patch   'top/:id'  => 'top#update'
+  post 'letter'     =>  'letter#create'
 
 end
