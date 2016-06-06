@@ -97,6 +97,7 @@ body {
 
 .col-md-4 {
 	padding-bottom: 20px;
+    height: 350px;
 }
 
 .row {
@@ -435,7 +436,7 @@ a:after {
 /* Section Dividers Backgrounds */
 
 .divider1 {
-	background-image: url('/assets/bg/divider1.jpg');
+	background-image: url('/assets/bg/drop.jpg');
     overflow: hidden;
 }
 

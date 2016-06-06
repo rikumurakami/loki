@@ -3,7 +3,7 @@ class TopController < ApplicationController
 before_action :move_to_index, except: :index
 
 def index
-  @tweets = Tweet.order("created_at DESC").page(params[:page]).per(9)
+  @tweets = Tweet.order("created_at DESC").page(params[:page]).per(12)
   respond_to do |format|
     format.html
     format.js
